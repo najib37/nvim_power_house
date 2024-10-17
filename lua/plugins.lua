@@ -10,7 +10,7 @@ return {
 
   -- ai setup
   require "plug.copilot",
-  require "plug.copilotChat",
+  require "plug.copilot_chat",
   require "plug.parrot",
 
   -- format config
@@ -18,53 +18,54 @@ return {
 
   -- dap config
 	require "dap.Dap",
-	require "plug.image",
 	-- require "dap.nodeDap",
 
+  -- plugins
+	require "plug.image",
+	require "plug.undo_tree",
   require "plug.leetcode",
   require "plug.presistence",
   require "plug.aerial",
-  -- plugins
 	require 'plug.luarocks',
-  require 'plug.tsComments',
-	require "plug.Neorg",
-	require 'plug.Treesitter',
-	require 'plug.Comments',
-	require 'plug.Nvimtree',
-	require 'plug.Telescope',
-	require 'plug.Bufferline',
-	require "plug.Alpha",
-	require "plug.Lualine",
-  require "plug.Indentline",
-	require "plug.Toggleterm",
-	require "plug.Notify",
-	require "plug.Noice",
-	require "plug.TreeSj",
-	require "plug.Lightspeed",
-	require "plug.Autopaire",
-	require "plug.Dressing",
-	require "plug.Cmp",
-	-- require "plug.Harpoon",
-	require "plug.treeNav",
-	require "plug.NeoGit",
-	require "plug.GitSign",
+  require 'plug.tscomments',
+	require "plug.neorg",
+	require 'plug.treesitter',
+	require 'plug.comments',
+	require 'plug.neotree',
+	require 'plug.telescope',
+	require 'plug.bufferline',
+	require "plug.alpha",
+	require "plug.lualine",
+  require "plug.indentline",
+	require "plug.toggleterm",
+	require "plug.notify",
+	require "plug.noice",
+	require "plug.tree_sj",
+	require "plug.lightspeed",
+	require "plug.autopaire",
+	require "plug.dressing",
+	require "plug.cmp",
+	require "plug.tree_nav",
+	require "plug.neogit",
+	require "plug.git_sign",
 	require "plug.lua_snip",
-	require "plug.friendly",
-	require "plug.autoTag",
-	require "plug.TodoCmp", -- TODO fix the vs-snippets
-  require "plug.oilNvim",
-  --
+	require "plug.friendly_snippets",
+	require "plug.auto_tag",
+	require "plug.todocmp",
+  require "plug.oil",
 
+  -- themes
   -- require "plug.TokyoNight",
   -- require "plug.capuccin",
   require "plug.dracula",
-  require "plug.monokai",
+  -- require "plug.monokai",
 
   -- flutter
-  require "plug.fluttertools",
+  require "plug.dart_tools",
+
   -- trash
 	-- require "NvimShip",
-	-- require "NvimUfo", -- [commented till i fix the highlighte]
-  -- require "plug.scoopNvim", -- TODO! keymaps
-	-- require "NvimRest", -- INFO: fd error 
+	-- require "NvimUfo", 
+  -- require "plug.scoopNvim",
+	-- require "NvimRest",
 }
