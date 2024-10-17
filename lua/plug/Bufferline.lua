@@ -2,7 +2,9 @@ return {
 	"akinsho/bufferline.nvim",
 	dependencies = "nvim-tree/nvim-web-devicons",
 	opts = {
-		vim.keymap.set("n", "<leader>x", ":bdelete<CR>"),
+		vim.keymap.set("n", "<leader>x", ":bdelete<CR>", { noremap = true, silent = true }),
+		vim.keymap.set("n", "<C-l>", ":BufferLineMoveNext<CR>",{ noremap = true, silent = true }),
+		vim.keymap.set("n", "<C-h>", ":BufferLineMovePrev<CR>", { noremap = true, silent = true }),
 		mode = {"buffers"},
 		middle_mouse_command = "bdelete! %d",
 		buffer_close_icon = "󰅖",

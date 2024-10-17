@@ -17,7 +17,7 @@ return {
 	version = "*", 
 	keys = {
 		{
-			"<leader>tt",
+			"<m-t>",
 			function()
 				newTerm(nil, "float"):toggle()
 			end,

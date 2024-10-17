@@ -8,6 +8,11 @@ return {
 	require "lsp.LspConfig",
 	require "lsp.serverSetting.TsTools",
 
+  -- ai setup
+  require "plug.copilot",
+  require "plug.copilotChat",
+  require "plug.parrot",
+
   -- format config
   require "format.conform",
 
@@ -39,7 +44,7 @@ return {
 	require "plug.Autopaire",
 	require "plug.Dressing",
 	require "plug.Cmp",
-	require "plug.Harpoon",
+	-- require "plug.Harpoon",
 	require "plug.treeNav",
 	require "plug.NeoGit",
 	require "plug.GitSign",
@@ -49,9 +54,6 @@ return {
 	require "plug.TodoCmp", -- TODO fix the vs-snippets
   require "plug.oilNvim",
   --
-  -- copilot setup
-  -- require "plug.copilot",
-  require "plug.copilotChat",
 
   -- require "plug.TokyoNight",
   -- require "plug.capuccin",

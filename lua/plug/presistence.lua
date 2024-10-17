@@ -5,6 +5,9 @@ return {
 		vim.keymap.set("n", "<leader>s", function()
 			require("persistence").select()
 		end),
+		vim.keymap.set("n", "<leader>p", function()
+			require("persistence").select()
+		end),
 		-- add any custom options here
 	},
 }

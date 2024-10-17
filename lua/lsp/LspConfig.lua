@@ -42,6 +42,11 @@ end
 local function keymaps()
 	vim.keymap.set("n", "<PageUp>", vim.diagnostic.goto_prev)
 	vim.keymap.set("n", "<PageDown>", vim.diagnostic.goto_next)
+
+	vim.keymap.set("n", "<m-1>", vim.diagnostic.goto_prev)
+	vim.keymap.set("n", "<m-2>", vim.diagnostic.goto_next)
+	vim.keymap.set("n", "<m-3>", ":Telescope diagnostics<cr>", { silent = true })
+
 	vim.keymap.set("n", "<leader>qq", ":Telescope diagnostics<cr>")
 
 	-- Use LspAttach autocommand to only map the following keys
