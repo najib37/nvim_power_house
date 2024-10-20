@@ -12,6 +12,7 @@ return {
   require "plug.copilot",
   require "plug.copilot_chat",
   require "plug.parrot",
+  require "plug.companion",
 
   -- format config
   require "format.conform",
@@ -21,6 +22,7 @@ return {
 	-- require "dap.nodeDap",
 
   -- plugins
+	require "plug.navic",
 	require "plug.image",
 	require "plug.undo_tree",
   require "plug.leetcode",

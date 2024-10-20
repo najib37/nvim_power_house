@@ -17,6 +17,10 @@ local keymap = vim.api.nvim_set_keymap
 --   term_mode = "t",
 --   command_mode = "c",
 
+-- keymaps to change the vsplit size
+keymap("n", "<C-1>", ":vertical resize -100<CR>", opts)
+keymap("n", "<C-2>", ":vertical resize +100<CR>", opts)
+
 -- tabs navigation
 keymap("n", "<S-j>", "", opts)
 keymap("n", ",1", ":tabNext<cr>", opts)
