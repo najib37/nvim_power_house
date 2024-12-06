@@ -20,6 +20,7 @@ local keymap = vim.api.nvim_set_keymap
 -- keymaps to change the vsplit size
 keymap("n", "<C-1>", ":vertical resize -100<CR>", opts)
 keymap("n", "<C-2>", ":vertical resize +100<CR>", opts)
+keymap("n", "<C-3>", ":wincmd x<CR>", opts)
 
 -- tabs navigation
 keymap("n", "<S-j>", "", opts)
@@ -52,7 +53,6 @@ keymap("v", "<S-Up>", "", opts)
 keymap("v", "<S-Down>", "", opts)
 
 keymap("n", ",z", ":BufferLinePickClose<CR>", opts)
-keymap("n", ",x", ":bdelete<CR>", opts)
 keymap("n", ",c", ":close<cr>", opts)
 keymap("n", "<BS>", "di", opts)
 
@@ -80,10 +80,14 @@ keymap("n", "<S-u>", ":redo<CR>", opts)
 -- keymap("n", "<A-Down>", "{", opts)
 
 -- comma commands
-keymap("n", ",,", ":w<CR>", opts)
-keymap("i", ",,", "<Esc>:w<CR>", opts)
-keymap("x", ",,", "<Esc>:w<CR>", opts)
-keymap("v", ",,", "<Esc>:w<CR>", opts)
+keymap("n", ",.", ":w<CR>", opts)
+keymap("i", ",.", "<Esc>:w<CR>", opts)
+keymap("x", ",.", "<Esc>:w<CR>", opts)
+keymap("v", ",.", "<Esc>:w<CR>", opts)
+keymap("n", ".,", ":w<CR>", opts)
+keymap("i", ".,", "<Esc>:w<CR>", opts)
+keymap("x", ".,", "<Esc>:w<CR>", opts)
+keymap("v", ".,", "<Esc>:w<CR>", opts)
 
 keymap("n", "qq", ":q<CR>", opts)
 keymap("i", "qq", "<Esc>:q<CR>", opts)

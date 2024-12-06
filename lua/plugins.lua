@@ -8,11 +8,13 @@ return {
 	require "lsp.LspConfig",
 	require "lsp.serverSetting.TsTools",
 
+
   -- ai setup
   require "plug.copilot",
   require "plug.copilot_chat",
-  require "plug.parrot",
+  -- require "plug.parrot",
   require "plug.companion",
+	require "plug.snacks",
 
   -- format config
   require "format.conform",
@@ -22,17 +24,18 @@ return {
 	-- require "dap.nodeDap",
 
   -- plugins
-	require "plug.navic",
-	require "plug.image",
+	-- require "plug.navic",
+	-- require "plug.image",
+  require "plug.window",
 	require "plug.undo_tree",
   require "plug.leetcode",
   require "plug.presistence",
   require "plug.aerial",
 	require 'plug.luarocks',
-  require 'plug.tscomments',
 	require "plug.neorg",
 	require 'plug.treesitter',
 	require 'plug.comments',
+  -- require 'plug.tscomments',
 	require 'plug.neotree',
 	require 'plug.telescope',
 	require 'plug.bufferline',
@@ -40,7 +43,7 @@ return {
 	require "plug.lualine",
   require "plug.indentline",
 	require "plug.toggleterm",
-	require "plug.notify",
+	-- require "plug.notify",
 	require "plug.noice",
 	require "plug.tree_sj",
 	require "plug.lightspeed",
