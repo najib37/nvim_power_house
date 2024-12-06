@@ -42,14 +42,14 @@ return {
 				require("telescope.builtin").registers()
 			end,
 		},
+		-- {
+		-- 	",b",
+		-- 	function()
+		-- 		require("telescope.builtin").current_buffer_tags()
+		-- 	end,
+		-- },
 		{
-			",b",
-			function()
-				require("telescope.builtin").current_buffer_tags()
-			end,
-		},
-		{
-			"<m-b>",
+			",-b",
 			function()
 				require("telescope.builtin").buffers()
 			end,

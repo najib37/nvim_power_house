@@ -22,6 +22,6 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<C- >", "<Cmd>CodeCompanionChat Toggle<CR>", { noremap = true, silent = true })
+		-- vim.keymap.set("n", "<C- >", "<Cmd>CodeCompanionChat Toggle<CR>", { noremap = true, silent = true })
 	end,
 }

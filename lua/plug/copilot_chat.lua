@@ -1,30 +1,14 @@
 return {
 	"CopilotC-Nvim/CopilotChat.nvim",
-	branch = "canary",
+	branch = "main",
 	dependencies = {
 		{ "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
 		{ "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
 	},
-	keys = {
-		{
-			"<leader>a",
-			function()
-				local input = vim.fn.input("Quick Chat: ")
-				if input ~= "" then
-					require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
-				end
-			end,
-			desc = "CopilotChat - Quick chat",
-		},
-		{
-			"<M-c>",
-			":CopilotChatToggle<CR>",
-			desc = "Toggle CopilotChat",
-			silent = true,
-		},
-	},
 	config = function()
 		require("CopilotChat").setup({
+
+			model = "claude-3.5-sonnet",
 			window = {
 				layout = "float",
 				relative = "cursor",
@@ -33,5 +17,12 @@ return {
 				row = 0.3,
 			},
 		})
+		vim.api.nvim_set_keymap("n", "<M-c>", ":CopilotChatToggle<CR>", { noremap = true, silent = true })
+		vim.api.nvim_set_keymap(
+			"n",
+			"<C- >",
+			[[:lua require('CopilotChat').ask(_, { selection = require('CopilotChat.select').buffer })<CR>]],
+			{ noremap = true, silent = true }
+		)
 	end,
 }
