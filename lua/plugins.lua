@@ -20,7 +20,6 @@ return {
 	require("plug.nvimsoround"),
 	require("plug.tree_sj"),
 
-
 	-- dap config
 	require("dap.Dap"),
 	-- require "dap.nodeDap",
@@ -43,14 +42,13 @@ return {
 	require("plug.dressing"),
 	require("plug.oil"),
 	require("plug.todocmp"),
+	require("plug.zen_mode"),
 
-  -- Navigation plugins
+	-- Navigation plugins
 	require("plug.lightspeed"),
 	require("plug.tree_nav"),
 
-  
-
-  -- Editing plugins
+	-- Editing plugins
 	require("plug.leetcode"),
 	require("plug.presistence"),
 	require("plug.luarocks"),
@@ -73,7 +71,6 @@ return {
 	require("plug.dracula"),
 	-- require "plug.monokai",
 
-
 	-- trash
 	-- require "NvimShip",
 	-- require "NvimUfo",
@@ -82,4 +79,3 @@ return {
 	-- require "plug.navic",
 	-- require "plug.image",
 }
-
