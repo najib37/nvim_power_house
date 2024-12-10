@@ -1,6 +1,7 @@
 return {
 	"zbirenbaum/copilot.lua",
 	cmd = "Copilot",
+	priority = 1000,
 	event = "InsertEnter",
   fix_pairs = true,
 	config = function()

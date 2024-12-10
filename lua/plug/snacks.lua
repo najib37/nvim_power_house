@@ -2,17 +2,17 @@ return {
 	"folke/snacks.nvim",
 	priority = 1000,
 	lazy = false,
-	---@type snacks.Config
 	opts = {
 		bigfile = { enabled = true },
-		dashboard = { enabled = true },
+		dashboard = { enabled = false },
 		notifier = {
 			enabled = true,
-			timeout = 3000,
+			timeout = 2000,
 		},
-		quickfile = { enabled = true },
-		statuscolumn = { enabled = true },
+		quickfile = { enabled = false },
+		statuscolumn = { enabled = false },
 		words = { enabled = true },
+		lazygit = { enabled = false },
 		styles = {
 			notification = {
 				wo = { wrap = true }, -- Wrap notifications
@@ -84,7 +84,7 @@ return {
 			desc = "Dismiss All Notifications",
 		},
 		{
-			"]]",
+			"{{",
 			function()
 				Snacks.words.jump(vim.v.count1)
 			end,
@@ -92,7 +92,7 @@ return {
 			mode = { "n", "t" },
 		},
 		{
-			"[[",
+			"}}",
 			function()
 				Snacks.words.jump(-vim.v.count1)
 			end,
