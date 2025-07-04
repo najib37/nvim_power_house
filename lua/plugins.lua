@@ -1,6 +1,7 @@
 return {
 	{ "nvim-tree/nvim-web-devicons" },
 	{ "nvim-lua/plenary.nvim" },
+  require("plug.nerdy"),
 
 	-- lsp config
 	require("lsp.Mason"),
