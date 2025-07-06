@@ -18,9 +18,16 @@ local keymap = vim.api.nvim_set_keymap
 --   command_mode = "c",
 
 -- keymaps to change the vsplit size
+--
+vim.api.nvim_set_keymap("n", "<m-s>", ":lua vim.fn.jobstart({'bash', '-c', 'cd /media/nramadan/05FA9BEB32C9F331/work/music_room && ./gradlew run'})<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<m-f>", ":!pkill -f 'java.*gradle'<cr>", { noremap = true, silent = true })
 keymap("n", "<C-1>", ":vertical resize -100<CR>", opts)
 keymap("n", "<C-2>", ":vertical resize +100<CR>", opts)
 keymap("n", "<C-3>", ":wincmd x<CR>", opts)
+keymap("n", "<M-q>", ":q!<CR>", opts)
+keymap("i", "<M-q>", ":q!<CR>", opts)
+keymap("x", "<M-q>", ":q!<CR>", opts)
+keymap("t", "<M-q>", ":q!<CR>", opts)
 
 -- tabs navigation
 keymap("n", "<S-j>", "", opts)
