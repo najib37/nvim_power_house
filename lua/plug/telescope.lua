@@ -49,7 +49,7 @@ return {
 		-- 	end,
 		-- },
 		{
-			",-b",
+			",b",
 			function()
 				require("telescope.builtin").buffers()
 			end,
