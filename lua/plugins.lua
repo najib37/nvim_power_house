@@ -17,11 +17,14 @@ return {
   require("plug.copilot_chat"),
   require("plug.companion"),
 
+
   -- format config
   require("format.conform"),
   require("plug.nvimsoround"),
   require("plug.tree_sj"),
   require("plug.markdown"),
+  require("plug.diagram"),
+  require("plug.image"),
 
   -- dap config
   require("dap.Dap"),
