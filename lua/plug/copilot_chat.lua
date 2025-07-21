@@ -35,7 +35,7 @@ return {
         row = 0.3,
       },
       sticky = {
-        'buffers',
+        '#buffers',
       },
       prompts = {
         Explain = {

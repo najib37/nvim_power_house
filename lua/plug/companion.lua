@@ -26,7 +26,40 @@ return {
       },
       adapters = {
         default = "copilot",
+        copilot = function()
+          return require("codecompanion.adapters").extend("copilot", {
+            schema = {
+              model = {
+                default = "claude-sonnet-4", -- Use the full model name
+              },
+            },
+          })
+        end,
+        -- copilot = function()
+        --   return require("codecompanion.adapters").extend("copilot", {
+        --     schema = {
+        --       model = {
+        --         model = "claude-sonnet-4",
+        --       },
+        --     },
+        --   })
+        -- end,
+        tavily = function()
+          return require("codecompanion.adapters").extend("tavily", {
+            env = {
+              url = "https://api.tavily.com/search",
+            },
+            headers = {
+              ["Content-Type"] = "application/json",
+              ["Authorization"] = "Bearer ${api_key}",
+            },
+            -- parameters = {
+            --   sync = true,
+            -- },
+          })
+        end,
       },
+
       strategies = {
         chat = {
           adapter = "copilot",
@@ -35,7 +68,12 @@ return {
           adapter = "copilot",
         },
       },
-    })
+    }
+
+
+    )
+
+
 
     vim.keymap.set("n", "<M-5>", "<Cmd>CodeCompanionChat Toggle<CR>", { noremap = true, silent = true })
   end,

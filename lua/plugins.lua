@@ -12,6 +12,7 @@ return {
   require("plug.friendly_snippets"),
 
   -- ai setup
+  require("plug.mcp"),
   require("plug.copilot"),
   require("plug.copilot_chat"),
   require("plug.companion"),
